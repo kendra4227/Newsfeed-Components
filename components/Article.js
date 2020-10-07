@@ -163,6 +163,13 @@ data.push({
   secondParagraph: 'Lambda is hard.',
   thirdParagraph: ' lorem ipson dlkdfkh dfkshfkdfhkdshfkdshfkdshfkfhdksfhksfhkdshfkdshfkdshfkdsfhkdsf',
 });
+ 
+/*let newArray = data.map(item => {
+  let newArray = articleMaker(item);
+  return newArray;
+
+
+})*/
 
 data.forEach(article => body.appendChild(articleMaker(article)));
 
