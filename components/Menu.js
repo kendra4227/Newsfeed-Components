@@ -41,15 +41,16 @@ function menuMaker (arr){
 // created an array for the list items
   arr.forEach(item =>{
     const listItem = document.createElement('li');
-    listItem.textContent = `${item}`;
+    listItem.textContent = item;
     list.appendChild(listItem);
 
   })
 // created menu button
   const button = document.querySelector(".menu-button");
   button.addEventListener("click", () => {
-    menu.classList.toggle("menu--open");
+    menu.classList.toggle("menu--open"); 
   });
+ 
 
   return menu;
 }

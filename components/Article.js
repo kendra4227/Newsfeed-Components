@@ -121,34 +121,37 @@ function articleMaker (obj){
   article.classList.add("article");
   // title element
   const artTitle = document.createElement("h2");
-  artTitle.textContent = $`{obj.title}`;
+  artTitle.textContent = obj.title;
   article.appendChild(artTitle)
 // creating date elment
   const date = document.createElement("p")
   date.classList.add("date");
-  date.textContent = $`{obj.date}`;
+  date.textContent = obj.date;
   article.appendChild(date);
 // creating 3 seperate paragrphs
   const par1 = document.createElement("p");
-  par1.textContent = $`{obj.firstParagraph}`;
+  par1.textContent = obj.firstParagraph;
   article.appendChild(par1);
 
   const par2 = document.createElement("p");
-  par2.textContent = $`{obj.secondParagraph}`;
+  par2.textContent = obj.secondParagraph;
   article.appendChild(par2);
 
   const par3 = document.createElement("p");
-  par3.textContent = $`{obj.thirdParagraph}`;
+  par3.textContent = obj.thirdParagraph;
   article.appendChild(par3);
 // creating Expand Buttton 
+
   const expand = document.createElement('span');
   expand.classList.add("expandButton");
   expand.textContent = "Expand";
+
   //Step 2
   expand.addEventListener('click', () => {
     article.classList.toggle("article-open");
+    
   });
-
+  article.appendChild(expand);
   return article;
 }
 
@@ -164,12 +167,7 @@ data.push({
   thirdParagraph: ' lorem ipson dlkdfkh dfkshfkdfhkdshfkdshfkdshfkfhdksfhksfhkdshfkdshfkdshfkdsfhkdsf',
 });
  
-/*let newArray = data.map(item => {
-  let newArray = articleMaker(item);
-  return newArray;
 
-
-})*/
 
 data.forEach(article => body.appendChild(articleMaker(article)));
 
